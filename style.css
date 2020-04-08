@@ -17,12 +17,35 @@ label{
 
 p{
     font-size: 28px;
+    font-family: 'Press Start 2P', cursive;
     line-height: 1.2;
 }
 
 article p{
     font-size: 35px;
+    font-family: 'Permanent Marker', cursive;
     padding: 20px;
+}
+
+.flex-container{
+    display: flex;
+    width: 100%;
+/*    min-width: 100px;*/
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+}
+
+.flex-item{
+    background-size: cover;
+    min-width: 300px;
+    padding: 5px;
+    align-self: center;
+    align-content: space-around;
+}
+
+.form1{
+    margin: 15%;
 }
 
 .container{
@@ -32,12 +55,6 @@ article p{
     padding-bottom: 4%;
 }
 
-.row{
-    width: 1005;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
 
 .row::after{
     display: table;
@@ -45,18 +62,10 @@ article p{
     content: ""
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+
+.col-2 {width: 50%;}
+.col-3 {width: 33%;}
+
 
 * {
     box-sizing: border-box;
@@ -118,6 +127,7 @@ ul.topnav li.dropdownIcon {
 #section-1-gradient {
     background-image: url("https://images.unsplash.com/photo-1479981280584-037818c1297d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     background-size: 100%;
+
     /* position: relative;
     width: auto;
     background-position: center center;
@@ -134,7 +144,15 @@ div.box{
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 2px 3px 0 rgba(0,0,0,.1);
 }
 
-div.pictue img{
+div.icon img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    box-shadow: -2px -2px 20px 2px rgba(63, 191, 191, 0.3), 2px 2px 17px 2px rgba(141,250,250,0.3);
+}
+
+
+div.picture img{
     display: block;
     margin: auto;
     box-shadow: -2px -2px 20px 2px rgba(0, 0, 0, .15), 2px 2px 17px 2px rgba(0,0,0,1);
@@ -143,14 +161,16 @@ div.pictue img{
 
 button {
     font-size: 32px;
+    font-family: 'Press Start 2P', cursive;
     font-weight: 700;
     color: #fff;
-    background-color: #0069ff;
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
     padding: 15px 60px;
     display: block;
     text-align: center;
     margin: 5px;
     border-radius: 7px;
+    
   }
   
   button.learnMore {
@@ -187,13 +207,13 @@ form h2{
 input[type="text"]{
     font-size: 20px;
     width: 400px;
-    min-width: 100px;
+    min-width: 20px;
     padding: 5px;
     border-radius: 7px;
 }
 
 footer.footsy{
-    background-color: #666;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     padding-left: 10%;
 }
 
@@ -214,6 +234,17 @@ footer.footsy ul li {
     line-height: 1.5;
 }
   
+
+.videoContainer iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    width: 500px;
+    height: 315px;
+    margin: 0;
+    overflow: hidden;
+}
+
 
 /*######### Mobile #############*/
 @media screen and (max-width: 680px){
@@ -246,20 +277,17 @@ footer.footsy ul li {
         text-align: left;
     }
     
+   
+    
     h1.section2Header {
+        font-family: 'Lobster', cursive;
         font-size: 50px;
       }
     article p {
         font-size: 25px;
     }
     
-    .col-7,
-    .col-6,
-    .col-5,
-    .col-4 {
-        width: 100%;
-        margin: 0;
-    }
+   
     
     div.mobileStack {
         width: 50%;
@@ -275,23 +303,21 @@ footer.footsy ul li {
         margin: 10px;
     }
     
-    div.pictue img {
+    div.picture img {
         width: 100%;
     }
     
-    div.leftSide-col,
-    div.rightSide-col {
-        margin: 15px;
-    }
+   
  
     
     input[type="text"]{
-        width: 350px;
+        width: 100%;
     }
     
     .videoContainer iframe {
         position: relative;
         width: 100%;
+        height: 100%;
         margin: 0;
         overflow: hidden;
     }
